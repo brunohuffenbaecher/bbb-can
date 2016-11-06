@@ -1,2 +1,2 @@
 # bbb-can
-Enabling CAN module on Beaglebone Black and using some python examples
+Exemplos em python para utilização dos controladores CAN na Beaglebone Black
