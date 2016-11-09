@@ -32,5 +32,5 @@ while True:
     #O loop a seguir irá formatar o conteudo do vetor para que possa ser apresentado na tela da forma de hexadecimal
     s=[]
     for i in range(len(message.data)): #loop que percorrerá todo o vetor message.data
-        s.append(hex(message.data[i])) Convertendo o valor em hexadecimal e adicionando ao fim do vetor s
+        s.append(hex(message.data[i])) #Convertendo o valor em hexadecimal e adicionando ao fim do vetor s
     print s
