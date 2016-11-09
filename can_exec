@@ -1,0 +1,21 @@
+#!/bin/bash
+# Enable Can0 and Can1
+
+echo "Ligando can........."
+echo BB-DCAN0 > /sys/devices/bone_capemgr.*/slots
+echo BB-DCAN1 > /sys/devices/bone_capemgr.*/slots
+echo "Done"
+
+echo "Habilitando Modprobe........."
+modprobe can
+modprobe can-dev
+modprobe can-raw
+echo "Done"
+
+echo "Setando parametros can..........."
+sudo ip link set can0 up type can bitrate 1000000 loopback off triple-sampling off listen-only off
+sudo ifconfig can0 up
+sudo ip link set can1 up type can bitrate 1000000 loopback off triple-sampling off listen-only off
+sudo ifconfig can1 up
+echo "Done"
+
